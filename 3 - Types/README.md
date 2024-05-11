@@ -12,4 +12,10 @@ Les types peuvent repr√©senter des valeurs basiques comme des chaines de caract√
 
 `const maclasse: MaClasse = new MaClasse()`
 
-`const monObj: MonObj = new MaClasse()`
+```
+interface MonObj = {
+  id: number;
+  title: string;
+}
+const monObj: MonObj = {id: 1, title: 'title'}
+```
