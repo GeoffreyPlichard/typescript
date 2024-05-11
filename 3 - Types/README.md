@@ -6,7 +6,7 @@ Par exemple, un type string est un type "chaine de caractère" mais possède aus
 
 `"Je suis un type string".includes("")`
 
-Les types peuvent représenter des valeurs basiques comme des chaines de caractère ou des nombres mais aussi des objets plus complexes comme des classes ou des objets littéraux.
+Les types peuvent représenter des valeurs basiques (types primitifs) comme des chaines de caractère ou des nombres mais aussi des objets plus complexes (types objets) comme des classes ou des objets littéraux.
 
 `const nb: number = 123`
 
@@ -19,3 +19,43 @@ interface MonObj = {
 }
 const monObj: MonObj = {id: 1, title: 'title'}
 ```
+
+#### Types primitifs
+
+Les types primitifs sont: number, boolean, string, void, null, undefined, symbol
+
+#### Types objets
+
+Les types objets sont: functions, array, class, object
+
+## Type annotations / Type inference
+
+Si aucun type n'est ajouté, Typescript en ajoutera un implicitement.
+Si on instancie une variable sans lui ajouter de type (Type annotations), Typescript essayera de deviner son type (Type inference)
+Par exemple:
+
+```
+const person = {
+  age: 20
+}
+person.name -> error
+```
+
+La plupart du temps, annoter les variables manuellement est inutile car Typescript le fait automatiquement.
+Les seules fois où l'on a besoin d'utiliser les annotations sont:
+
+- Quand on instancie une variable plus tard:
+
+```
+let apples;
+apples = 5; // Type any
+```
+
+- Quand une fonction retourne any:
+
+```
+const json = '{"x": 10, "y": 20}';
+const coordinates = JSON.parse(json); // JSON.parse retourne any
+```
+
+- Quand on veut accépter plusieurs types
