@@ -22,3 +22,7 @@ let point: {x: number; y: number} = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+const anonymousFc = function (i: number): number {
+  return i;
+}

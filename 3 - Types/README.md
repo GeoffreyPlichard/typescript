@@ -59,3 +59,21 @@ const coordinates = JSON.parse(json); // JSON.parse retourne any
 ```
 
 - Quand on veut accépter plusieurs types
+
+## Void / Never
+
+We can add "void" type to a function that returns anything or return null / undefined
+
+```
+function nothing(): void {
+  console.log('');
+}
+```
+
+If a function doesn't have a return but stop the function we can use "never"
+
+```
+const throwError = (message: string): never => {
+  throw new Error(message);
+};
+```
