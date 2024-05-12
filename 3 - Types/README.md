@@ -62,7 +62,7 @@ const coordinates = JSON.parse(json); // JSON.parse retourne any
 
 ## Void / Never
 
-We can add "void" type to a function that returns anything or return null / undefined
+On peut ajouter le type "void" qui ne retourne rien ou qui retourne null / undefined
 
 ```
 function nothing(): void {
@@ -70,7 +70,7 @@ function nothing(): void {
 }
 ```
 
-If a function doesn't have a return but stop the function we can use "never"
+Si une fonction ne retourne rien mais stop le script, on peut utiliser "never"
 
 ```
 const throwError = (message: string): never => {
