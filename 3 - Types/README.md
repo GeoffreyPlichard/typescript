@@ -77,3 +77,16 @@ const throwError = (message: string): never => {
   throw new Error(message);
 };
 ```
+
+## Arrays
+
+Quand on déclare une variable avec un tableau vide, mieux vaut utiliser une annotation sinon typescript considérera que le tableau peut contenir n'importe quoi:
+
+```
+const arr = []; // type any[]
+const arr: string[] = []; // mieux
+```
+
+On peut aussi annoter plusieurs niveaux:
+
+`const arr = [['test']]; // type string[][]`
