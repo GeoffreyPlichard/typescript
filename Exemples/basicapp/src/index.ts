@@ -1,8 +1,15 @@
-import { User } from './User';
-import { Company } from './Company';
+// Need to add this to get google types working
+/// <reference types="@types/google.maps" />
 
-const user = new User();
-console.log(user);
+// import { User } from './User';
+// import { Company } from './Company';
 
-const company = new Company();
-console.log(company);
+
+// Invoke the Map class and pass the div element to attach it
+new google.maps.Map(document.getElementById('map') as HTMLElement, {
+  zoom: 1,
+  center: {
+    lat: 0,
+    lng: 0
+  }
+});
