@@ -90,3 +90,12 @@ const arr: string[] = []; // mieux
 On peut aussi annoter plusieurs niveaux:
 
 `const arr = [['test']]; // type string[][]`
+
+## Tuples
+
+Les tuples permettent de représenter des propriétés sous forme de tableau en préservant l'ordre des types.
+
+```
+type Person = [string, number, boolean];
+const person: Person = ['John', 24, hasLicence];
+```
