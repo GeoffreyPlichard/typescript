@@ -1,5 +1,5 @@
 
-const drink = {
+const drinks = {
   color: 'brown',
   carbonated: true,
   sugar: 40
