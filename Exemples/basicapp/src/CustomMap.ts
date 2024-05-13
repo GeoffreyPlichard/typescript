@@ -1,10 +1,11 @@
 // Wrap google map pour exposer uniquement les méthodes dont on a besoin pour
 // éviter que d'autres personnes puissent accéder aux autres méthodes
 
-// User et Company doivent contenir location et markerContent
-interface Mappable {
+// User et Company doivent contenir location, markerContent
+export interface Mappable {
   location: google.maps.LatLngLiteral;
   markerContent(): string;
+  color: string;
 }
 
 export class CustomMap {

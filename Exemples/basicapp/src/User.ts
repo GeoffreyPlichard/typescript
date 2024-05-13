@@ -1,12 +1,16 @@
 
 import  { faker } from '@faker-js/faker';
+import { Mappable } from './CustomMap';
 
-export class User {
+// implements allow to point the source of an error if
+// we forget to add a required property
+export class User implements Mappable {
   name: string;
   location: {
     lat: number;
     lng: number;
   }
+  color: 'red';
 
   constructor() {
     this.name = faker.name.firstName();
