@@ -99,3 +99,13 @@ Les tuples permettent de représenter des propriétés sous forme de tableau en 
 type Person = [string, number, boolean];
 const person: Person = ['John', 24, hasLicence];
 ```
+
+## Type Guards
+
+Pour vérifier un type on peut utiliser typeof ou instanceof.
+"typeof" sera utilisé avec les types primitifs tandis que instanceof doit être utilisé avec les objets instanciés avec un constructeur (array...).
+On peut utiliser typeof pour les arrays etc en Javascript mais pas en Typescript.
+
+`"test" typeof string`
+
+`[0, 1] instanceof Array`
