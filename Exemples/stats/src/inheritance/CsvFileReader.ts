@@ -1,9 +1,10 @@
 
 import fs from 'fs'; // Need to install Node type definition file (see package.json)
 
+export abstract class CsvFileReader<T> {
+  abstract mapRow(row: string[]): T;
 
-export class CsvFileReader {
-  data: string[][] = [];
+  data: T[] = [];
   
   constructor(public filename: string) {}
 
@@ -15,6 +16,8 @@ export class CsvFileReader {
     .split('\n')
     .map((row: string): string[] => {
       return row.split(',');
-    });
+    })
+    .map(this.mapRow);
   }
+
 }
