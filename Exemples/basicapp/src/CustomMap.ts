@@ -1,8 +1,10 @@
 // Wrap google map pour exposer uniquement les méthodes dont on a besoin pour
 // éviter que d'autres personnes puissent accéder aux autres méthodes
 
+// User et Company doivent contenir location et markerContent
 interface Mappable {
-  location: google.maps.LatLngLiteral
+  location: google.maps.LatLngLiteral;
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -20,12 +22,20 @@ export class CustomMap {
   }
 
   addMarker(mappable: Mappable): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
         lng: mappable.location.lng
       }
+    });
+
+    marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: mappable.markerContent()
+      });
+
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }
