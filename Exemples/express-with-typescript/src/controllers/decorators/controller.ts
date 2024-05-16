@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import express from 'express';
 import { AppRouter } from '../../AppRouter';
 
 export function controller(routePrefix: string) {
