@@ -4,12 +4,21 @@ class Animal {
   move(distance: number): void {
     console.log(`${this.name} moved ${distance} meters.`);
   }
+
+  sound(): void {
+    console.log('Parent class');
+  }
 }
 
 class Dog extends Animal {
   constructor(public name = "dog") {
     // Permet de récupérer les propriétés et méthodes du parent
     super(name);
+  }
+
+  sound() {
+    super.sound();
+    console.log('child class');
   }
 }
 
