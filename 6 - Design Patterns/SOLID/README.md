@@ -25,3 +25,7 @@ Par exemple une classe User ne devrait pas avoir une méthode userAuthentication
 
 Une classe doit être ouverte aux extensions mais fermée aux modifications.
 A partir du moment ou une classe a été reviewed et testé, elle ne devrait plus bouger. Il faudrait utiliser l'héritage pour "extend" le comportement original.
+
+## Liskov Substitution
+
+Si une classe S hérite des propriétés d'une classe T, on devrait pouvoir utiliser la classe S au lieu de la classe T sans altérer les propriétés du programme.
