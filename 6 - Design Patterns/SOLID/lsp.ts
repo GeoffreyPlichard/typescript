@@ -1,3 +1,5 @@
+// Liskov Substituion
+
 // Ici on créé une classe abstraite car les autres classes hériterons 
 // de cette classe et on ne veut pas d'implémentation avec une nouvelle
 // instance.

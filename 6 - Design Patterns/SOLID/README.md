@@ -29,3 +29,9 @@ A partir du moment ou une classe a été reviewed et testé, elle ne devrait plu
 ## Liskov Substitution
 
 Si une classe S hérite des propriétés d'une classe T, on devrait pouvoir utiliser la classe S au lieu de la classe T sans altérer les propriétés du programme.
+
+## Interface Segragation
+
+Eviter d'ajouter des fonctionnalités à une interface existante. A la place, créer une nouvelle interface.
+Toujours se demander si cette fonctionnalité appartient vraiment à cette interface.
+Celà permet d'être plus flexible dans la création de classes.
