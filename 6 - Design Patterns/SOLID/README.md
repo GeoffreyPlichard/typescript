@@ -35,3 +35,9 @@ Si une classe S hérite des propriétés d'une classe T, on devrait pouvoir util
 Eviter d'ajouter des fonctionnalités à une interface existante. A la place, créer une nouvelle interface.
 Toujours se demander si cette fonctionnalité appartient vraiment à cette interface.
 Celà permet d'être plus flexible dans la création de classes.
+Quand une classe doit implémenter des méthodes dont elle a pas besoin, c'est là que ISP est utile.
+
+## Dependency Inversion
+
+Un module de haut niveau ne devrait pas être dépendant d'un module de bas niveau car si on veut modifier le module de bas niveau, il faudrait aussi faire des modifications dans le module de haut niveau.
+Les deux devraient dépendre de l'abstraction (classes abstraites ou interfaces).
