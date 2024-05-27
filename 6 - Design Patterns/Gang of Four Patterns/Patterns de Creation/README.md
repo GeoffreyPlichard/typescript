@@ -8,3 +8,4 @@ Le singleton est un pattern de création qui s'assure qu'une classe a seulement 
 
 Ce pattern permet de cloner des objets.
 Il est utile quand la création d'une nouvelle instance est plus coûteuse en ressource que d'en copier une existante.
+Il permet de copier un objet en créant un nouvel objet avec une référence différente (Deep Cloning).
