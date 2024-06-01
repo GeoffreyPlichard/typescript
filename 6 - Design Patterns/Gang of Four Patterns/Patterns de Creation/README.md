@@ -13,3 +13,9 @@ Il permet de copier un objet en créant un nouvel objet avec une référence dif
 ## Builder
 
 Ce pattern permet de créer des objets complexes grâce à une classe Builder qui est reponsable de la création d'un objet step by step, et une classe Director qui définie quelles parties doit contenir l'objet.
+Le but est de séparation la création d'objets complexes de leur représentation.
+
+## Factory
+
+Le Factory Pattern fourni une interface pour créer des objets dans une super-classe, mais permet aux sous-classes de modifier le type d'objets qui seront créés.
+Par exemple, une classe CarFactory qui produit plusieurs sortes de voitures grâce à une méthode qui permet de définir son type.
