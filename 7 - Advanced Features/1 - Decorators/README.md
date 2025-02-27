@@ -21,3 +21,16 @@ class Example {
 // Logging greet function
 // Hello, world!
 ```
+
+## Composition
+
+Il est possible d'ajouter plusieurs décorateurs qui seront exécutés dans
+l'ordre d'ajout.
+
+```
+@decorateur1
+@decorateur2
+class Example {
+
+}
+```
